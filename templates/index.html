@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot EcoNix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="avatar">🌱</div>
+            <div class="header-info">
+                <h2>EcoBot</h2>
+                <p>Atención al Cliente • EcoNix</p>
+            </div>
+            <div class="status-dot" title="En línea"></div>
+        </header>
+
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">¡Hola! 🎨 Bienvenido(a) a <b>EcoNix</b>. Gracias por comunicarte con nosotros.
+
+Será un gusto ayudarte a conocer nuestras pinturas ecológicas y resolver cualquier duda.
+
+<b>¿Qué te gustaría hacer?</b>
+1️⃣ Conocer nuestros productos.
+2️⃣ Beneficios de nuestras pinturas.
+3️⃣ Precios y promociones.
+4️⃣ Preguntas frecuentes.
+5️⃣ Realizar un pedido o hablar con un asesor.</div>
+        </div>
+
+        <form class="chat-input-area" id="chat-form">
+            <input type="text" id="user-input" placeholder="Escribe tu consulta o un número..." autocomplete="off" required>
+            <button type="submit" id="send-btn">
+                <span>Enviar</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
